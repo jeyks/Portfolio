@@ -37,7 +37,7 @@ export default function Contact() {
             </span>
 
             <p className="text-3xl font-medium leading-snug tracking-tight text-gray-900 dark:text-gray-100 md:text-4xl">
-              I'm currently open to new opportunities, freelance projects, and
+              I&apos;m currently open to new opportunities, freelance projects, and
               meaningful collaborations.
             </p>
           </blockquote>
@@ -45,8 +45,8 @@ export default function Contact() {
           <div className="mt-8 h-px w-16 bg-gray-300 dark:bg-gray-700" />
 
           <p className="mt-6 text-sm text-gray-600 dark:text-gray-400">
-            Whether you're hiring, building something exciting, or just want to
-            connect, I'd love to hear from you.
+            Whether you&apos;re hiring, building something exciting, or just want to
+            connect, I&apos;d love to hear from you.
           </p>
         </div>
 
