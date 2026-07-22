@@ -153,7 +153,7 @@ export default function Hero() {
 
           <motion.div variants={item}>
             <p className="mt-3 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-400">
-              I'm{" "}
+              I&apos;m{" "}
               <span className="font-semibold text-blue-600 dark:text-blue-400">
                 {personalInfo.fullName}
               </span>
