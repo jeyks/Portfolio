@@ -29,9 +29,10 @@ export default function Navbar() {
       <nav className="flex h-16 items-center justify-between px-4 md:justify-evenly md:px-2">
         <a
           href="#home"
-          className="text-base font-semibold text-gray-900 dark:text-gray-100"
+          className="font-jetbrains text-xl  text-gray-900 dark:text-gray-100"
         >
-          {personalInfo.fullName}
+          <span className="font-bold">JKR</span>
+          <span className="font-medium text-blue-500">.dev</span>
         </a>
 
         {/* Desktop links */}

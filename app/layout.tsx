@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { personalInfo } from "@/data/portfolio";
 
 export const metadata: Metadata = {
-  title:  "Justine Resureccion — Portfolio",
+  title: "Justine Resureccion — Portfolio",
   description: personalInfo.introduction,
   keywords: [
     "software developer",
@@ -33,15 +34,17 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
         <ThemeProvider>
-          <a
-            href="#home"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-blue-600 text-white px-3 py-2 rounded"
-          >
-            Skip to content
-          </a>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <LayoutWrapper>
+            <a
+              href="#home"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-blue-600 text-white px-3 py-2 rounded"
+            >
+              Skip to content
+            </a>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </LayoutWrapper>
         </ThemeProvider>
       </body>
     </html>
