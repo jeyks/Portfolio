@@ -99,7 +99,7 @@ export default function Preloader() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            Crafting Digital Experiences
+            Justine Kyle Resureccion
           </motion.p>
         </motion.div>
       )}

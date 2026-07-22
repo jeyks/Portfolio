@@ -26,7 +26,7 @@ export default function Navbar() {
           : "border-transparent bg-white dark:bg-gray-950"
       }`}
     >
-      <nav className="flex h-16 items-center justify-between px-4 md:justify-evenly md:px-2">
+     <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <a
           href="#home"
           className="font-jetbrains text-xl  text-gray-900 dark:text-gray-100"
@@ -52,14 +52,14 @@ export default function Navbar() {
           </div>
         </ul>
 
-        <a
+       {/* <a
           href={personalInfo.resumeUrl}
           download
           className="gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition-colors duration-200 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600; hidden md:flex items-center"
         >
           Download Resume
           <Download size={16} />
-        </a>
+        </a> */}
 
         {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">

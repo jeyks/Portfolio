@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="section-container py-10 text-center">
         <p className="text-sm text-gray-500 dark:text-gray-400">
           &copy; {new Date().getFullYear()} {personalInfo.fullName}. All rights
-          reserved. Version 1.0.0
+          reserved. Version 1.1.0
         </p>
       </div>
     </footer>

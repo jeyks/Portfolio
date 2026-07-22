@@ -15,7 +15,7 @@ export const personalInfo = {
   email: "resureccionjustine@gmail.com",
   linkedin: "https://linkedin.com/in/justineresureccion",
   github: "https://github.com/jeyks",
-  resumeUrl: "/RESUME_RESURECCION_July2026.pdf",
+  resumeUrl: "/Resume_Resureccion.pdf",
   introduction:
     "I'm an Information Technology graduate with experience in data administration and a passion for building web applications. I enjoy solving problems through technology, whether it's developing user-friendly web interfaces or working with data to ensure accuracy and efficiency.",
   summary:
