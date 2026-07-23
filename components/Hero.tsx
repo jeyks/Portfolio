@@ -10,17 +10,7 @@ import {
 } from "lucide-react";
 import { personalInfo } from "@/data/portfolio";
 import TypingText from "./TypingText";
-
-import { FaReact, FaNodeJs } from "react-icons/fa";
-
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-  SiLaravel,
-  SiJavascript,
-  SiFigma,
-} from "react-icons/si";
+import FloatingTechs from "./FloatingTechs";
 
 const container = {
   hidden: {},
@@ -31,49 +21,6 @@ const container = {
     },
   },
 };
-
-const technologies = [
-  {
-    icon: FaReact,
-    color: "text-cyan-400",
-    className: "-left-28 top-12",
-  },
-  {
-    icon: SiNextdotjs,
-    color: "text-black dark:text-white",
-    className: "-right-28 top-20",
-  },
-  {
-    icon: SiTypescript,
-    color: "text-blue-500",
-    className: "-left-36 bottom-40",
-  },
-  {
-    icon: SiTailwindcss,
-    color: "text-sky-400",
-    className: "-right-32 bottom-32",
-  },
-  {
-    icon: SiLaravel,
-    color: "text-red-500",
-    className: "left-20 -bottom-14",
-  },
-  {
-    icon: FaNodeJs,
-    color: "text-green-500",
-    className: "right-20 -bottom-16",
-  },
-  {
-    icon: SiJavascript,
-    color: "text-yellow-500",
-    className: "left-1/2 -bottom-16 -translate-x-1/2",
-  },
-  {
-    icon: SiFigma,
-    color: "text-purple-500",
-    className: "left-1/2 -top-24 -translate-x-1/2",
-  }
-];
 
 const item = {
   hidden: {
@@ -123,7 +70,7 @@ export default function Hero() {
           variants={container}
           initial="hidden"
           animate="show"
-          className="relative z-10 -translate-y-10 flex max-w-4xl flex-col items-center text-center"
+          className="relative z-10 flex max-w-4xl flex-col items-center text-center"
         >
           {/* Badge */}
 
@@ -140,7 +87,7 @@ export default function Hero() {
           {/* Heading */}
 
           <motion.div variants={item} className="mt-8">
-            <h1 className="text-5xl font-black leading-[1.05] tracking-tight text-gray-900 dark:text-white md:text-7xl">
+            <h1 className="max-w-4xl text-5xl font-black tracking-tight text-gray-900 dark:text-white md:text-7xl">
               Turning Ideas into
               <br />
               Interactive Experiences.
@@ -236,69 +183,8 @@ export default function Hero() {
               <Mail size={20} />
             </motion.a>
           </motion.div>
+          <FloatingTechs />
         </motion.div>
-        {technologies.map((tech, index) => {
-          const Icon = tech.icon;
-
-          return (
-            <motion.div
-              key={index}
-              initial={{
-                opacity: 0,
-                scale: 0.8,
-              }}
-              animate={{
-                opacity: 1,
-                y: [0, -10, 0],
-                rotate: [-3, 3, -3],
-              }}
-              transition={{
-                delay: index * 0.2,
-                duration: 4,
-                repeat: Infinity,
-              }}
-              whileHover={{
-                scale: 1.2,
-              }}
-              className={`absolute hidden lg:flex ${tech.className}`}
-            >
-              <div
-                className="
-                group
-                relative
-                flex h-16 w-16 items-center justify-center
-                rounded-2xl
-                border border-white/10
-                bg-white/70
-                shadow-xl
-                backdrop-blur-xl
-                transition-all duration-100
-                hover:-translate-y-1
-                hover:border-blue-400
-                hover:bg-gradient-to-br 
-                hover:from-blue-500/20
-                hover:via-cyan-500/10
-                hover:to-blue-600/20
-                dark:bg-neutral-900/80
-                "
-              >
-                <motion.div
-                  whileHover={{
-                    scale: 1.15,
-                    rotate: 8,
-                  }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 350,
-                    damping: 15,
-                  }}
-                >
-                  <Icon className={`text-3xl ${tech.color}`} />
-                </motion.div>
-              </div>
-            </motion.div>
-          );
-        })}
       </div>
     </section>
   );
