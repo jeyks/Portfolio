@@ -15,48 +15,48 @@ const technologies = [
   {
     icon: FaReact,
     color: "text-cyan-400",
-    className: "-left-10 top-12 lg:-left-28",
+    className: "left-[8%] top-[18%]",
   },
   {
     icon: SiNextdotjs,
-    color: "text-black dark:text-white",
-    className: "-right-10 top-20 lg:-right-28",
+    color: "text-gray-900 dark:text-white",
+    className: "right-[10%] top-[12%]",
   },
   {
     icon: SiTypescript,
     color: "text-blue-500",
-    className: "-left-12 bottom-40 lg:-left-36",
+    className: "left-[18%] bottom-[20%]",
   },
   {
     icon: SiTailwindcss,
     color: "text-sky-400",
-    className: "-right-10 bottom-32 lg:-right-32",
+    className: "right-[22%] bottom-[18%]",
   },
   {
     icon: SiLaravel,
     color: "text-red-500",
-    className: "left-8 -bottom-8 lg:left-20 lg:-bottom-14",
+    className: "left-[45%] top-[12%]",
   },
   {
     icon: FaNodeJs,
     color: "text-green-500",
-    className: "right-8 -bottom-8 lg:right-20 lg:-bottom-16",
+    className: "right-[42%] bottom-[12%]",
   },
   {
     icon: SiJavascript,
     color: "text-yellow-500",
-    className: "left-1/2 -bottom-10 -translate-x-1/2 lg:-bottom-20",
+    className: "left-[80%] top-[55%]",
   },
   {
     icon: SiFigma,
     color: "text-purple-500",
-    className: "left-1/2 -top-10 -translate-x-1/2 lg:-top-24",
+    className: "left-[40%] bottom-[10%]",
   },
 ];
 
 export default function FloatingTechs() {
   return (
-    <>
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {technologies.map((tech, index) => {
         const Icon = tech.icon;
 
@@ -150,6 +150,6 @@ export default function FloatingTechs() {
           </motion.div>
         );
       })}
-    </>
+    </div>
   );
 }
