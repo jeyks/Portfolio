@@ -29,6 +29,7 @@ interests:
 export const navLinks: NavLink[] = [
   { label: "Home", href: "#home" },
   { label: "Skills", href: "#skills" },
+  { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Journey", href: "#experience" },
   { label: "Contact", href: "#contact" },
@@ -99,60 +100,62 @@ export const projects: Project[] = [
   },
 ];
 
-export const experience: ExperienceItem[] = [
+export const journey = [
   {
-    id: "exp-1",
-    jobTitle: "Data Administrator Intern",
-    company: "National Reinsurance Corporation of the Philippines",
-    startDate: "December 2025",
-    endDate: "April 2026",
-    responsibilities: [
-      "Performed data entry, cleaning, and validation of financial datasets using Microsoft Excel and Google Workspace.",
-      "Conducted data quality checks by identifying inconsistencies, duplicate records, and formatting issues to ensure data accuracy.",
-      "Utilized Excel formulas, functions, and VBA macros to streamline data validation and improve processing efficiency.",
-      "Monitored data processing progress using Google Sheets trackers and maintained accurate status updates.",
-      "Collaborated with team members through Gmail and Google Chat to resolve data issues and support reporting workflows.",
-    ],
-    achievements: [
-      "Developed an Excel VBA macro to automate parts of the data cleaning process, improving workflow efficiency.",
-      "Created a custom Excel validation checker to compare datasets and identify discrepancies during monthly reporting.",
-    ],
+    id: "journey-1",
+    year: "2022",
+    type: "education",  
+    title: "Started My IT Journey",
+    subtitle: "National University - Laguna",
+    description:
+      "Began studying Information Technology and discovered my passion for software development and problem solving.",
+    icon: "graduation",
+    tech: ["HTML", "CSS", "JavaScript"],
   },
   {
-    id: "exp-2",
-    jobTitle: "Lead Frontend Developer",
-    company: "Department of Tourism CALABARZON (Capstone 2 Project)",
-    startDate: "July 2025",
-    endDate: "October 2025",
-    responsibilities: [
-      "Led the design and development of the user interface for TARA4A, ensuring consistency with the Department of Tourism CALABARZON branding and design standards.",
-      "Collaborated with the development team to deliver a cohesive, intuitive, and user-friendly experience across the website.",
-      "Reviewed frontend implementations to ensure design consistency, responsiveness, and functional accuracy.",
-      "Identified and resolved frontend issues discovered during QA testing to improve usability, performance, and cross-browser compatibility.",
-      "Built responsive interfaces that provided a seamless experience across desktop, tablet, and mobile devices."
-    ],
-    achievements: [
-      "Served as the frontend lead, coordinating UI implementation and maintaining design consistency throughout the project.",
-      "Successfully delivered a production-ready tourism website as part of the capstone project in collaboration with the development team."
-    ],
+    id: "journey-2",
+    year: "2024",
+    type: "project",
+    title: "Frontend Developer & QA Tester",
+    subtitle: "GEOTRACE Capstone Project",
+    description:
+      "Designed responsive interfaces, performed QA testing, and collaborated with the team to build a geofence tracking system.",
+    icon: "code",
+    tech: ["Laravel", "React", "MySQL", "Tailwind"],
   },
   {
-    id: "exp-3",
-    jobTitle: "Frontend Developer / QA Tester",
-    company: "Southern Technology (Capstone 1 Project)",
-    startDate: "August 2024",
-    endDate: "March 2025",
-    responsibilities: [
-      "Designed and developed the user interface for GEOTRACE, an Android-enabled geofence tracker for manpower and payroll management with a web-based monitoring system.",
-      "Tested, identified, and resolved issues across both the web and mobile applications to improve functionality and reliability.",
-      "Conducted QA testing and refined the user interface based on client and user feedback.",
-      "Collaborated with the development team to ensure a responsive, intuitive, and consistent user experience."
-    ],
-    achievements: [
-      "Contributed to the successful development and delivery of a functional geofence tracking and payroll management system.",
-      "Improved application usability and stability by identifying and resolving bugs during the QA and testing phases."
-    ],
-  }
+    id: "journey-3",
+    year: "2025",
+    type: "internship",
+    title: "Data Administrator Intern",
+    subtitle: "National Reinsurance Corporation",
+    description:
+      "Worked with financial datasets, Excel automation, VBA macros, and data validation to support business reporting.",
+    icon: "briefcase",
+    tech: ["Excel", "VBA", "Google Workspace"],
+  },
+  {
+    id: "journey-4",
+    year: "2025",
+    type: "achievement",
+    title: "PacketHACKS Top 15",
+    subtitle: "Hack the Climate",
+    description:
+      "Developed AirSentinel, an IoT-based air quality monitoring solution, and reached the semi-finals.",
+    icon: "trophy",
+    tech: ["ESP32", "Firebase", "IoT"],
+  },
+  {
+    id: "journey-5",
+    year: "2026",
+    type: "education",
+    title: "Graduated Magna Cum Laude",
+    subtitle: "National University - Laguna",
+    description:
+      "Completed my BS in Information Technology while building modern web applications and strengthening my frontend development skills.",
+    icon: "graduation",
+    tech: ["Next.js", "TypeScript", "React"],
+  },
 ];
 
 export const education: EducationItem[] = [
