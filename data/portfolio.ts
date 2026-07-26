@@ -7,7 +7,7 @@ import {
   NavLink,
   SocialLink,
 } from "@/lib/types";
-import Image from "next/image";
+import Image from "next/image"; 
 
 export const personalInfo = {
   fullName: "Justine Kyle O. Resureccion",
@@ -28,8 +28,8 @@ interests:
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "#home" },
-  { label: "Skills", href: "#skills" },
   { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Journey", href: "#experience" },
   { label: "Contact", href: "#contact" },
