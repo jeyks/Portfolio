@@ -222,41 +222,50 @@ export const education: EducationItem[] = [
   },
 ];
 
-export const certifications: Certification[] = [
+export const certifications = [
   {
-    id: "cert-1",
-    name: "Data Fundamentals",
-    issuer: "IBM",
-    dateObtained: "Apr 2026",
+    id: 1,
+    issuer: "DataCamp",
+    title: "AI Fundamentals",
+    dateObtained: "July 2026",
+    credential: "https://www.datacamp.com/skill-verification/AIF0026758729530",
   },
   {
-    id: "cert-2",
-    name: "Salesforce Supported Virtual Internship Program 2025 - Philippines",
-    issuer: "Salesforce",
-    dateObtained: "Jan 2026",
-  },
-  {
-    id: "cert-3",
-    name: "IT Customer Support Basics",
-    issuer: "Cisco",
-    dateObtained: "Nov 2025",
-  },
-  {
-    id: "cert-4",
-    name: "Semi-Finals of the Packethacks x HackTheClimate Pitching and Demo 2025",
-    issuer: "HackTheClimate Hackathon and Awards",
+    id: 2,
+    issuer: "packetHACKS",
+    title: "Packethacks Semi-Finals Top 15",
     dateObtained: "2025",
+    credential:"/certificate/IOT.jpg",
   },
   {
-    id: "cert-5",
-    name: "Agentblazer Workshop Completion Certificate",
+    id: 3,
+    issuer: "IBM",
+    title: "IBM Data Fundamentals",
+    dateObtained: "2025",
+    credential:
+      "https://www.credly.com/badges/89de8030-8ae2-46a5-80d1-535571d1ef73/",
+  },
+  {
+    id: 4,
     issuer: "Salesforce",
-    dateObtained: "Aug 2025",
+    title: "Salesforce Virtual Internship",
+    dateObtained: "2025",
+    credential: "/certificate/SalesforceSVIP.jpg",
   },
   {
-    id: "cert-6",
-    name: "Information Technology Specialist in Network Security",
-    issuer: "Certiport - A Pearson VUE Business",
-    dateObtained: "Feb 2025",
+    id: 5,
+    issuer: "Certiport",
+    title: "Network Security",
+    dateObtained: "2025",
+    credential:
+      "https://www.certiport.com/portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=465&cvid=NZNObdQxTpMSW/+DHF1sLw==",
+  },
+  {
+    id: 6,
+    issuer: "Cisco",
+    title: "IT Customer Support Basics",
+    dateObtained: "2025",
+    credential:
+      "https://www.credly.com/badges/b4fff280-170e-42a2-8ea1-7a49c9c385dc",
   },
 ];

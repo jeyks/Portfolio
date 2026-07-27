@@ -43,7 +43,7 @@ export default function Journey() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mx-auto max-w-3xl text-center"
+          className="mx-auto max-w-3xl text-center "
         >
           <h2 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 dark:text-white md:text-5xl">
             My Journey

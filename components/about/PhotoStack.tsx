@@ -40,13 +40,13 @@ const photos = [
     subtitle: "Capturing moments that matter.",
     emoji: "✨",
   },
-{
-  id: 6,
-  image: "/about/me6.jpg",
-  title: "Behind the Wheel",
-  subtitle: "Creating memories along the way.",
-  emoji: "🚘",
-},
+  {
+    id: 6,
+    image: "/about/me6.jpg",
+    title: "Behind the Wheel",
+    subtitle: "Creating memories along the way.",
+    emoji: "🚘",
+  },
 ];
 
 export default function PhotoStack() {
@@ -66,7 +66,7 @@ export default function PhotoStack() {
   };
 
   return (
-    <div className="relative mx-auto h-[560px] w-[360px]">
+    <div className="relative mx-auto h-[460px] w-[280px] sm:h-[520px] sm:w-[320px] lg:h-[560px] lg:w-[360px]">
       {/* Glow */}
 
       <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-[100px]" />
@@ -119,13 +119,14 @@ export default function PhotoStack() {
                 border
                 border-slate-200
                 bg-white
-                p-3
+                p-2s
                 shadow-lg
                 shadow-slate-200/60
                 dark:border-white/10
                 dark:bg-slate-900
                 dark:shadow-2xl
                 dark:shadow-black/40
+                sm:p-3
                 "
               >
                 <div className="relative">
@@ -136,16 +137,14 @@ export default function PhotoStack() {
                     height={430}
                     className="h-[400px] w-[340px] rounded-2xl object-cover"
                   />
-
-
                 </div>
 
                 <div className="p-4">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                  <h3 className="text-base font-semibold text-slate-900 dark:text-white sm:text-lg">
                     {card.emoji} {card.title}
                   </h3>
 
-                  <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                  <p className="mt-1 text-xs text-slate-500 dark:text-slate-400 sm:text-sm">
                     {card.subtitle}
                   </p>
                 </div>
@@ -155,7 +154,7 @@ export default function PhotoStack() {
         })}
       </AnimatePresence>
 
-      <p className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-sm text-slate-500">
+      <p className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs text-slate-500 sm:-bottom-10 sm:text-sm">
         ← Drag the photo →
       </p>
     </div>
