@@ -172,7 +172,7 @@ export const journey = [
       "Co-developed AirSentinel, an IoT-powered air quality monitoring solution, earning a place among the Top 15 teams in a nationwide innovation competition.",
     icon: "trophy",
     tech: ["Arduino", "IoT", "Google Maps API"],
-    image: "/Airsentinel.jpg",
+    image: "/AirSentinel.jpg",
   },
   {
     id: "journey-7",
