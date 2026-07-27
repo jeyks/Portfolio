@@ -148,7 +148,7 @@ export const journey = [
       "Developed responsive user interfaces, performed quality assurance testing, and collaborated with the team to build a geofence tracking and payroll management system.",
     icon: "code",
     tech: ["Laravel", "Tailwind CSS", "MySQL"],
-    image: "/Geotrace1.jpg",
+    image: "/GeoTrace1.jpg",
   },
   {
     id: "journey-5",
