@@ -8,6 +8,28 @@ export interface Project {
   liveUrl: string;
 }
 
+export interface JourneyItem {
+
+  id: string;
+
+  year: string;
+
+  type: string;
+
+  title: string;
+
+  subtitle: string;
+
+  description: string;
+
+  icon: string;
+
+  image: string;
+
+  tech: string[];
+
+}
+
 export interface ExperienceItem {
   id: string;
   jobTitle: string;

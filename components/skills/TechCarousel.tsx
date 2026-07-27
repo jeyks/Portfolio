@@ -26,7 +26,11 @@ import { Palette } from "lucide-react";
 
 const techStack = [
   { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+  {
+    name: "Next.js",
+    icon: SiNextdotjs,
+    className: "text-black dark:text-white",
+  },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
@@ -36,7 +40,11 @@ const techStack = [
   { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "SQL", icon: SiMysql, color: "#4479A1" },
   { name: "Git", icon: SiGit, color: "#F05032" },
-  { name: "GitHub", icon: SiGithub, color: "#ffffff" },
+  {
+    name: "GitHub",
+    icon: SiGithub,
+    className: "text-slate-900 dark:text-white",
+  },
   { name: "VS Code", icon: VscVscode, color: "#007ACC" },
   { name: "Android Studio", icon: SiAndroidstudio, color: "#3DDC84" },
   { name: "Figma", icon: SiFigma, color: "#A259FF" },
@@ -80,16 +88,9 @@ const iconVariants = {
 };
 
 export default function TechCarousel() {
- 
-
   return (
-    <div
-      className="relative overflow-hidden py-8"
-    >
-      <div
-        className="marquee flex w-max gap-6"
-        
-      >
+    <div className="relative overflow-hidden py-8">
+      <div className="marquee flex w-max gap-6">
         {[...techStack, ...techStack].map((tech, index) => {
           const Icon = tech.icon;
 
@@ -123,7 +124,8 @@ export default function TechCarousel() {
               <motion.div variants={iconVariants}>
                 <Icon
                   size={32}
-                  style={{ color: tech.color }}
+                  className={tech.className}
+                  style={tech.color ? { color: tech.color } : undefined}
                 />
               </motion.div>
 
@@ -142,4 +144,4 @@ export default function TechCarousel() {
       <div className="pointer-events-none absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-background via-background/70 to-transparent" />
     </div>
   );
-} 
+}

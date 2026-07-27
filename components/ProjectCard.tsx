@@ -2,66 +2,144 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import type { Project } from "@/lib/types";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <motion.div
-      className="group overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 transition-colors duration-300"
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.2 }}
+    <motion.article
+      whileHover="hover"
+      initial="rest"
+      className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all duration-300 dark:border-slate-800 dark:bg-slate-900"
     >
-      <div className="relative h-48 w-full bg-gray-100 dark:bg-gray-800">
-        <Image
-          src={project.imageUrl}
-          alt={`${project.title} preview`}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 50vw"
+      {/* Image */}
+      <div className="relative aspect-[16/10] overflow-hidden">
+        <motion.div
+          variants={{
+            rest: { scale: 1 },
+            hover: { scale: 1.06 },
+          }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+          }}
+          className="h-full w-full"
+        >
+          <Image
+            src={project.imageUrl}
+            alt={project.title}
+            fill
+            className="object-cover"
+          />
+        </motion.div>
+
+        {/* Overlay */}
+        <motion.div
+          variants={{
+            rest: { opacity: 0 },
+            hover: { opacity: 1 },
+          }}
+          transition={{ duration: 0.3 }}
+          className="absolute inset-0 "
         />
-      </div>
 
-      <div className="p-5">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-          {project.title}
-        </h3>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-          {project.description}
-        </p>
+        {/* Hover Actions */}
+        <motion.div
+          variants={{
+            rest: {
+              opacity: 0,
+              y: 20,
+            },
+            hover: {
+              opacity: 1,
+              y: 0,
+            },
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          className="absolute inset-0 flex items-center justify-center gap-4"
+        >
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:scale-105"
+            >
+              <span className="flex items-center gap-2">
+                View Project
+                <ArrowUpRight size={18} />
+              </span>
+            </a>
+          )}
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.techStack.map((tech) => (
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/30 bg-white/10 p-3 text-white backdrop-blur-md transition hover:bg-white/20"
+            >
+              <Github size={20} />
+            </a>
+          )}
+        </motion.div>
+
+        {/* Tech Pills */}
+        <div className="absolute left-5 top-5 flex flex-wrap gap-2">
+          {project.techStack.slice(0, 4).map((tech) => (
             <span
               key={tech}
-              className="rounded-md bg-gray-100 dark:bg-gray-800 px-2.5 py-1 text-xs font-medium text-gray-700 dark:text-gray-300"
+              className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-slate-800 backdrop-blur dark:bg-slate-900/80 dark:text-white"
             >
               {tech}
             </span>
           ))}
         </div>
-
-        {/*<div className="mt-5 flex items-center gap-4">
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-          >
-            <Github size={16} />
-            Code
-          </a>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-          >
-            <ExternalLink size={16} />
-            Live Demo
-          </a>
-        </div>  */}
       </div>
-    </motion.div>
+
+      {/* Content */}
+      <div className="p-6">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <motion.h3
+              variants={{
+                rest: { y: 0 },
+                hover: { y: -2 },
+              }}
+              transition={{ duration: 0.25 }}
+              className="text-2xl font-bold text-slate-900 dark:text-white"
+            >
+              {project.title}
+            </motion.h3>
+
+            <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+              {project.description}
+            </p>
+          </div>
+
+          <motion.div
+            variants={{
+              rest: {
+                rotate: 0,
+                x: 0,
+              },
+              hover: {
+                rotate: 45,
+                x: 4,
+              },
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 250,
+            }}
+            className="rounded-full border border-slate-200 p-3 dark:border-slate-700"
+          >
+            <ArrowUpRight size={20} />
+          </motion.div>
+        </div>
+      </div>
+    </motion.article>
   );
 }
