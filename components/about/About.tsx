@@ -125,8 +125,8 @@ export default function About() {
               transition={{ delay: 0.2 }}
               className="mt-10 border-l-4 border-blue-500 pl-5 italic text-slate-500 dark:text-slate-400"
             >
-              "Behind every line of code is a life filled with stories,
-              experiences, and people who inspire it."
+              &ldquo;Behind every line of code is a life filled with stories,
+              experiences, and people who inspire it.&ldquo;
             </motion.blockquote>
 
             {/* Current Focus 
