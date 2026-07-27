@@ -62,7 +62,7 @@ export default function About() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400">
-            Every developer has a story beyond the screen. Here's a little of
+            Every developer has a story beyond the screen. Here&apos;s a little of
             mine.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ export default function About() {
 
             <div className="mt-8 space-y-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
               <p>
-                Hi! I'm Justine. When I'm away from my computer, you'll probably
+                Hi! I&apos;m Justine. When I&apos;m away from my computer, you&apos;ll probably
                 find me spending time with my family, serving as a church
                 organist, going for a walk, enjoying ice cream, or simply making
                 the most of everyday moments.
@@ -105,12 +105,12 @@ export default function About() {
               <p>
                 I enjoy experiences that help me slow down, reflect, and
                 appreciate the people around me. They remind me that growth
-                isn't just about learning new skills—it's also about becoming a
+                isn&apos;t just about learning new skills—it&apos;s also about becoming a
                 better person.
               </p>
 
               <p>
-                Whether I'm exploring a new place, learning something new, or
+                Whether I&apos;m exploring a new place, learning something new, or
                 creating memories with friends and family, I try to stay curious
                 and appreciate the journey. Those experiences shape who I am,
                 both personally and professionally.
