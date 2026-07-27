@@ -41,21 +41,7 @@ export const socialLinks: SocialLink[] = [
   { label: "Email", href: `mailto:${personalInfo.email}`, icon: "mail" },
 ];
 
-export const skillCategories: SkillCategory[] = [
-  {
-    category: "Web Development",
-    skills: ["JavaScript", "TypeScript", "React", "Next.js", "SQL", "Tailwind CSS", "Laravel", "Node.js", "Express.js", "MongoDB"],
-  },
-  {
-    category: "Tools & Technologies",
-    skills: ["Git", "GitHub", "VS Code", "Android Studio", "Figma", "Canva", "Capcut", "Microsoft Clipchamp"],
-  },
-  {
-    category: "Data Administration & Analytics",
-    skills: ["Microsoft Excel", "Power BI", "SQL","Google Workspace"],
-  },
 
-];
 
 export const projects: Project[] = [
   {
